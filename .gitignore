@@ -1,0 +1,5 @@
+inputs/
+output.xlsx
+*.pyc
+__pycache__/
+credentials.json
