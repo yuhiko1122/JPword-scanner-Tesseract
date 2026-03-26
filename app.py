@@ -5,7 +5,9 @@ from datetime import datetime
 from io import BytesIO
 import streamlit as st
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+import platform
+if platform.system() == "Windows":
+    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 st.set_page_config(page_title="手書きOCR", page_icon="📝", layout="centered")
 st.title("📝 手書き文字 → テキスト変換")
